@@ -94,13 +94,18 @@ body {
 
 
 .stitch-decoracion {
-
-    font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     margin-bottom: 10px;
 
-    animation:
-        flotar 3s ease-in-out infinite;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+.stitch-decoracion img {
+    width: 130px;
+    height: auto;
 }
 
 
@@ -715,13 +720,18 @@ body {
 
 
 .stitch-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    font-size: 70px;
+    margin-top: 80px;
 
-    margin-top: 20px;
+    animation: flotar 3s ease-in-out infinite;
+}
 
-    animation: flotar 3s infinite;
-
+.stitch-final img {
+    width: 180px;
+    height: auto;
 }
 
 
