@@ -1,0 +1,833 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    font-family: 'Baloo 2', sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #bcecff,
+            #d9f5ff,
+            #f5fbff
+        );
+
+    color: #315d78;
+
+    overflow-x: hidden;
+}
+
+
+/* =====================================
+   PANTALLA INICIAL
+===================================== */
+
+.inicio {
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #e8faff,
+            transparent 35%
+        ),
+
+        linear-gradient(
+            160deg,
+            #9edfff,
+            #c8efff,
+            #eafaff
+        );
+
+    animation: aparecer 1.2s ease;
+}
+
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.estrellas {
+
+    position: absolute;
+
+    top: 40px;
+
+    font-size: 25px;
+
+    color: white;
+
+    animation: flotar 3s ease-in-out infinite;
+}
+
+
+.stitch-decoracion {
+
+    font-size: 80px;
+
+    margin-bottom: 10px;
+
+    animation:
+        flotar 3s ease-in-out infinite;
+}
+
+
+@keyframes flotar {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+
+.pequeno {
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    color: #39718e;
+
+}
+
+
+.inicio h1 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 55px;
+
+    line-height: .9;
+
+    color: #287ca7;
+
+    margin: 15px 0;
+
+}
+
+
+.numero {
+
+    width: 125px;
+    height: 125px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 75px;
+
+    color: white;
+
+    background: #79cbea;
+
+    border: 7px solid #dff7ff;
+
+    box-shadow:
+        0 10px 25px rgba(50,130,170,.2);
+
+    margin: 10px auto 20px;
+
+}
+
+
+.texto-inicio {
+
+    margin-bottom: 15px;
+
+    color: #47758a;
+
+}
+
+
+.boton-abrir {
+
+    border: none;
+
+    background: white;
+
+    color: #3987ae;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(50,130,170,.18);
+
+    transition: .3s;
+}
+
+
+.boton-abrir:hover {
+
+    transform: translateY(-3px) scale(1.03);
+
+}
+
+
+/* =====================================
+   BOTÓN MÚSICA
+===================================== */
+
+.boton-musica {
+
+    position: fixed;
+
+    right: 18px;
+    top: 18px;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    border: 2px solid white;
+
+    background: #82cee9;
+
+    color: white;
+
+    font-size: 20px;
+
+    z-index: 1000;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,.12);
+}
+
+
+/* =====================================
+   INVITACIÓN
+===================================== */
+
+.invitacion {
+
+    display: none;
+
+    min-height: 100vh;
+
+    position: relative;
+
+    padding-bottom: 50px;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 10%,
+            #ffffff 0 3%,
+            transparent 4%
+        ),
+
+        linear-gradient(
+            180deg,
+            #b9eaff,
+            #e4f7ff 50%,
+            #fff8fb
+        );
+
+}
+
+
+.invitacion.mostrar {
+
+    display: block;
+
+    animation: subir .9s ease;
+
+}
+
+
+@keyframes subir {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+   NUBES
+===================================== */
+
+.nube {
+
+    position: absolute;
+
+    background: rgba(255,255,255,.75);
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+
+}
+
+
+.nube1 {
+
+    width: 120px;
+    height: 50px;
+
+    top: 80px;
+    left: -30px;
+
+}
+
+
+.nube2 {
+
+    width: 150px;
+    height: 60px;
+
+    top: 280px;
+    right: -50px;
+
+}
+
+
+.nube3 {
+
+    width: 100px;
+    height: 45px;
+
+    top: 500px;
+    left: -30px;
+
+}
+
+
+/* =====================================
+   DECORACIONES
+===================================== */
+
+.decoracion {
+
+    position: absolute;
+
+    color: white;
+
+    font-size: 35px;
+
+    animation: flotar 4s infinite ease-in-out;
+
+}
+
+
+.decoracion1 {
+
+    top: 160px;
+    right: 30px;
+
+}
+
+
+.decoracion2 {
+
+    top: 370px;
+    left: 30px;
+
+}
+
+
+.decoracion3 {
+
+    top: 650px;
+    right: 35px;
+
+}
+
+
+/* =====================================
+   SECCIONES
+===================================== */
+
+.seccion {
+
+    text-align: center;
+
+    padding:
+        80px
+        25px
+        30px;
+
+}
+
+
+.arriba {
+
+    font-size: 15px;
+
+    letter-spacing: 3px;
+
+    color: #528da7;
+
+}
+
+
+.encabezado h2 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 45px;
+
+    line-height: 1;
+
+    color: #286f95;
+
+    margin-top: 15px;
+
+}
+
+
+.encabezado h2 span {
+
+    color: #4caed5;
+
+    display: block;
+
+}
+
+
+.numero-grande {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 120px;
+
+    line-height: 1;
+
+    color: #65c3e6;
+
+    text-shadow:
+        4px 4px 0 white;
+
+    margin: 10px;
+
+}
+
+
+.mensaje {
+
+    max-width: 300px;
+
+    margin: auto;
+
+    font-size: 19px;
+
+    color: #51788b;
+
+}
+
+
+/* =====================================
+   TARJETAS
+===================================== */
+
+.tarjeta {
+
+    width: calc(100% - 40px);
+
+    max-width: 430px;
+
+    margin: 25px auto;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: rgba(255,255,255,.75);
+
+    border-radius: 30px;
+
+    border: 2px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 12px 30px rgba(55,140,180,.12);
+
+    backdrop-filter: blur(5px);
+
+}
+
+
+.icono {
+
+    font-size: 40px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.tarjeta h3 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 27px;
+
+    color: #347b9e;
+
+}
+
+
+.fecha {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 27px;
+
+    color: #55afd2;
+
+    margin: 10px 0;
+
+}
+
+
+.lugar {
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.boton {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    padding: 12px 22px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: #65bddd;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+}
+
+
+.boton:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =====================================
+   CUENTA REGRESIVA
+===================================== */
+
+.contador-seccion {
+
+    text-align: center;
+
+    padding: 30px 15px;
+
+}
+
+
+.contador-seccion h3 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 28px;
+
+    color: #397f9e;
+
+    margin-bottom: 20px;
+
+}
+
+
+.contador {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+}
+
+
+.contador-item {
+
+    width: 70px;
+
+    padding: 12px 5px;
+
+    border-radius: 18px;
+
+    background: white;
+
+    box-shadow:
+        0 7px 18px rgba(60,130,160,.12);
+
+}
+
+
+.contador-item span {
+
+    display: block;
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 30px;
+
+    color: #55acd0;
+
+}
+
+
+.contador-item small {
+
+    font-size: 10px;
+
+    color: #7b9aaa;
+
+}
+
+
+/* =====================================
+   MENSAJE FINAL
+===================================== */
+
+.mensaje-final {
+
+    text-align: center;
+
+    padding: 60px 30px;
+
+}
+
+
+.corazones {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.mensaje-final h3 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 40px;
+
+    color: #3785a5;
+
+}
+
+
+.mensaje-final p {
+
+    max-width: 300px;
+
+    margin: 10px auto;
+
+    font-size: 18px;
+
+}
+
+
+.stitch-final {
+
+    font-size: 70px;
+
+    margin-top: 20px;
+
+    animation: flotar 3s infinite;
+
+}
+
+
+/* =====================================
+   WHATSAPP
+===================================== */
+
+.confirmacion {
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+}
+
+
+.confirmacion h3 {
+
+    font-family: 'Fredoka', sans-serif;
+
+    font-size: 35px;
+
+    color: #377e9d;
+
+}
+
+
+.confirmacion p {
+
+    margin-bottom: 15px;
+
+}
+
+
+.boton-whatsapp {
+
+    display: inline-block;
+
+    padding: 14px 25px;
+
+    border-radius: 30px;
+
+    background: #8dd8a5;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 8px 20px rgba(50,150,90,.15);
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #5c8495;
+
+}
+
+
+.pequeño-footer {
+
+    font-size: 14px;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================
+   CELULARES PEQUEÑOS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .inicio h1 {
+        font-size: 45px;
+    }
+
+    .numero {
+        width: 110px;
+        height: 110px;
+        font-size: 65px;
+    }
+
+    .encabezado h2 {
+        font-size: 38px;
+    }
+
+    .numero-grande {
+        font-size: 100px;
+    }
+
+    .contador-item {
+        width: 62px;
+    }
+
+}

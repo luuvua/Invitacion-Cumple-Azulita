@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title> ¡Cumpleaños Azulita! 🎂 </title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================
+         MÚSICA
+    ========================== -->
+
+    <audio id="musica" loop>
+        <source src="musica/dardos.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="botonMusica" class="boton-musica">
+        🎵
+    </button>
+
+
+    <!-- =========================
+         PANTALLA DE INICIO
+    ========================== -->
+
+    <section id="inicio" class="inicio">
+
+        <div class="estrellas">
+            ✦　⋆　✧　⋆　✦
+        </div>
+
+        <div class="stitch-decoracion">
+            💙
+        </div>
+
+        <p class="pequeno">
+            ¡Estás invitado/a!
+        </p> 
+
+        <h1>
+            Mi<br>
+            cumpleaños
+        </h1>
+
+        <div class="numero">
+            2
+        </div>
+
+        <p class="texto-inicio">
+            Tocá para abrir la invitación
+        </p>
+
+        <button id="abrirInvitacion" class="boton-abrir">
+            💙 Abrir invitación!
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         INVITACIÓN
+    ========================== -->
+
+    <main id="invitacion" class="invitacion">
+
+        <!-- Decoraciones -->
+
+        <div class="nube nube1"></div>
+        <div class="nube nube2"></div>
+        <div class="nube nube3"></div>
+
+        <div class="decoracion decoracion1">✦</div>
+        <div class="decoracion decoracion2">♡</div>
+        <div class="decoracion decoracion3">✧</div>
+
+
+        <!-- ENCABEZADO -->
+
+        <section class="seccion encabezado">
+
+            <p class="arriba">
+                ¡ESTÁS INVITADO/A!
+            </p>
+
+            <h2>
+                Mi primer
+                <span>cumpleaños</span>
+            </h2>
+
+            <div class="numero-grande">
+                2
+            </div>
+
+            <p class="mensaje">
+                Quiero compartir este día
+                tan especial con vos 💙
+            </p>
+
+        </section>
+
+
+        <!-- FECHA -->
+
+        <section class="tarjeta">
+
+            <div class="icono">
+                🎂
+            </div>
+
+            <h3>
+                ¡Guardá la fecha!
+            </h3>
+
+            <div class="fecha">
+                5 DE DICIEMBRE
+            </div>
+
+            <p>
+                📍 Plaza Punto Seguro
+            </p>
+
+        </section>
+
+
+        <!-- CUENTA REGRESIVA -->
+
+        <section class="contador-seccion">
+
+            <h3>
+                Falta poquito...
+            </h3>
+
+            <div class="contador">
+
+                <div class="contador-item">
+                    <span id="dias">00</span>
+                    <small>DÍAS</small>
+                </div>
+
+                <div class="contador-item">
+                    <span id="horas">00</span>
+                    <small>HORAS</small>
+                </div>
+
+                <div class="contador-item">
+                    <span id="minutos">00</span>
+                    <small>MIN</small>
+                </div>
+
+                <div class="contador-item">
+                    <span id="segundos">00</span>
+                    <small>SEG</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- UBICACIÓN -->
+
+        <section class="tarjeta">
+
+            <div class="icono">
+                📍
+            </div>
+
+            <h3>
+                ¿Dónde?
+            </h3>
+
+            <p class="lugar">
+                Plaza Punto Seguro
+            </p>
+
+            <!--
+            REEMPLAZÁ EL # POR EL LINK DE GOOGLE MAPS
+            -->
+
+            <a href="#"
+               id="botonUbicacion"
+               class="boton">
+                📍 Ver ubicación
+            </a>
+
+        </section>
+
+
+        <!-- MENSAJE -->
+
+        <section class="mensaje-final">
+
+            <div class="corazones">
+                💙 🩵 💙
+            </div>
+
+            <h3>
+                ¡Te espero!
+            </h3>
+
+            <p>
+                Va a ser un día lleno de juegos,
+                risas y mucho amor.
+            </p>
+
+            <div class="stitch-final">
+                👽
+            </div>
+
+        </section>
+
+
+        <!-- WHATSAPP -->
+
+        <section class="confirmacion">
+
+            <h3>
+                ¿Venís?
+            </h3>
+
+            <p>
+                Confirmá tu asistencia 💙
+            </p>
+
+
+            <!--
+            ======================================
+            BOTÓN DE WHATSAPP
+            ======================================
+
+            MÁS ADELANTE CAMBIÁ:
+
+            NUMERO-AQUI
+
+            por el número de WhatsApp.
+
+            Ejemplo:
+
+            https://wa.me/5491123456789
+
+            -->
+
+            <a href="#"
+               id="whatsapp"
+               class="boton-whatsapp">
+
+                💬 Confirmar por WhatsApp
+
+            </a>
+
+        </section>
+
+
+        <!-- PIE -->
+
+        <footer>
+
+            <p>
+                Con mucho amor 💙
+            </p>
+
+            <p class="pequeño-footer">
+                Nos vemos el 5 de diciembre ✨
+            </p>
+
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
